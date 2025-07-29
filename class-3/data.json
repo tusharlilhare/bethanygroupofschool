@@ -1,0 +1,504 @@
+{
+  "students": [
+    {
+      "id": "STU001",
+      "name": "Kanak Sarathe",
+      "class": "Nursery",
+      "dob": "15-08-2010",
+      "contact": "7909385310",
+      "address": "Bethany Convent School, DM 49 Phase II Indus Town, Ratanpur Bhopal",
+      "photo": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f6f41e04-143f-4f57-9559-9919ae136766.png",
+      "school": {
+        "name": "BETHANY CONVENT SCHOOL",
+        "address": "DM-49, Indus Town, Bhopal",
+        "session": "2025-26",
+        "logo": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9b1d2966-1016-421f-b849-f0a5eb823572.png",
+        "building": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e5131ce2-1033-4096-8562-2a3300b0fa0c.png",
+        "contact": {
+          "phone": "0755-2897222",
+          "email": "info@bethanybhopal.edu.in",
+          "website": "www.bethanybhopal.edu.in"
+        },
+        "codes": {
+          "affiliation": "1030568",
+          "udise": "23420111373"
+        }
+      }
+    },
+    {
+      "id": "STU002",
+      "name": "Aarav Sharma",
+      "class": "KG",
+      "dob": "22-05-2011",
+      "contact": "9876543210",
+      "address": "123 Main Street, Bhopal",
+      "photo": "https://via.placeholder.com/110x120?text=Aarav",
+      "school": {
+        "name": "BETHANY CONVENT SCHOOL",
+        "address": "DM-49, Indus Town, Bhopal",
+        "session": "2025-26",
+        "logo": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9b1d2966-1016-421f-b849-f0a5eb823572.png",
+        "building": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e5131ce2-1033-4096-8562-2a3300b0fa0c.png",
+        "contact": {
+          "phone": "0755-2897222",
+          "email": "info@bethanybhopal.edu.in",
+          "website": "www.bethanybhopal.edu.in"
+        },
+        "codes": {
+          "affiliation": "1030568",
+          "udise": "23420111373"
+        }
+      }
+    },
+    {
+      "id": "STU003",
+      "name": "Priya Patel",
+      "class": "1",
+      "dob": "10-11-2010",
+      "contact": "8765432109",
+      "address": "456 Oak Avenue, Bhopal",
+      "photo": "https://via.placeholder.com/110x120?text=Priya",
+      "school": {
+        "name": "BETHANY CONVENT SCHOOL",
+        "address": "DM-49, Indus Town, Bhopal",
+        "session": "2025-26",
+        "logo": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9b1d2966-1016-421f-b849-f0a5eb823572.png",
+        "building": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e5131ce2-1033-4096-8562-2a3300b0fa0c.png",
+        "contact": {
+          "phone": "0755-2897222",
+          "email": "info@bethanybhopal.edu.in",
+          "website": "www.bethanybhopal.edu.in"
+        },
+        "codes": {
+          "affiliation": "1030568",
+          "udise": "23420111373"
+        }
+      }
+    },
+    {
+      "id": "STU004",
+      "name": "Rahul Verma",
+      "class": "2",
+      "dob": "03-04-2009",
+      "contact": "7654321098",
+      "address": "789 Pine Road, Bhopal",
+      "photo": "https://via.placeholder.com/110x120?text=Rahul",
+      "school": {
+        "name": "BETHANY CONVENT SCHOOL",
+        "address": "DM-49, Indus Town, Bhopal",
+        "session": "2025-26",
+        "logo": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9b1d2966-1016-421f-b849-f0a5eb823572.png",
+        "building": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e5131ce2-1033-4096-8562-2a3300b0fa0c.png",
+        "contact": {
+          "phone": "0755-2897222",
+          "email": "info@bethanybhopal.edu.in",
+          "website": "www.bethanybhopal.edu.in"
+        },
+        "codes": {
+          "affiliation": "1030568",
+          "udise": "23420111373"
+        }
+      }
+    },
+    {
+      "id": "STU005",
+      "name": "Ananya Singh",
+      "class": "3",
+      "dob": "18-09-2008",
+      "contact": "6543210987",
+      "address": "321 Elm Street, Bhopal",
+      "photo": "https://via.placeholder.com/110x120?text=Ananya",
+      "school": {
+        "name": "BETHANY CONVENT SCHOOL",
+        "address": "DM-49, Indus Town, Bhopal",
+        "session": "2025-26",
+        "logo": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9b1d2966-1016-421f-b849-f0a5eb823572.png",
+        "building": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e5131ce2-1033-4096-8562-2a3300b0fa0c.png",
+        "contact": {
+          "phone": "0755-2897222",
+          "email": "info@bethanybhopal.edu.in",
+          "website": "www.bethanybhopal.edu.in"
+        },
+        "codes": {
+          "affiliation": "1030568",
+          "udise": "23420111373"
+        }
+      }
+    },
+    {
+      "id": "STU006",
+      "name": "Vihaan Gupta",
+      "class": "4",
+      "dob": "25-12-2007",
+      "contact": "5432109876",
+      "address": "654 Maple Lane, Bhopal",
+      "photo": "https://via.placeholder.com/110x120?text=Vihaan",
+      "school": {
+        "name": "BETHANY CONVENT SCHOOL",
+        "address": "DM-49, Indus Town, Bhopal",
+        "session": "2025-26",
+        "logo": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9b1d2966-1016-421f-b849-f0a5eb823572.png",
+        "building": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e5131ce2-1033-4096-8562-2a3300b0fa0c.png",
+        "contact": {
+          "phone": "0755-2897222",
+          "email": "info@bethanybhopal.edu.in",
+          "website": "www.bethanybhopal.edu.in"
+        },
+        "codes": {
+          "affiliation": "1030568",
+          "udise": "23420111373"
+        }
+      }
+    },
+    {
+      "id": "STU007",
+      "name": "Ishaan Kumar",
+      "class": "5",
+      "dob": "07-07-2007",
+      "contact": "4321098765",
+      "address": "987 Cedar Road, Bhopal",
+      "photo": "https://via.placeholder.com/110x120?text=Ishaan",
+      "school": {
+        "name": "BETHANY CONVENT SCHOOL",
+        "address": "DM-49, Indus Town, Bhopal",
+        "session": "2025-26",
+        "logo": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9b1d2966-1016-421f-b849-f0a5eb823572.png",
+        "building": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e5131ce2-1033-4096-8562-2a3300b0fa0c.png",
+        "contact": {
+          "phone": "0755-2897222",
+          "email": "info@bethanybhopal.edu.in",
+          "website": "www.bethanybhopal.edu.in"
+        },
+        "codes": {
+          "affiliation": "1030568",
+          "udise": "23420111373"
+        }
+      }
+    },
+    {
+      "id": "STU008",
+      "name": "Sanya Mishra",
+      "class": "6",
+      "dob": "14-03-2006",
+      "contact": "3210987654",
+      "address": "159 Birch Street, Bhopal",
+      "photo": "https://via.placeholder.com/110x120?text=Sanya",
+      "school": {
+        "name": "BETHANY CONVENT SCHOOL",
+        "address": "DM-49, Indus Town, Bhopal",
+        "session": "2025-26",
+        "logo": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9b1d2966-1016-421f-b849-f0a5eb823572.png",
+        "building": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e5131ce2-1033-4096-8562-2a3300b0fa0c.png",
+        "contact": {
+          "phone": "0755-2897222",
+          "email": "info@bethanybhopal.edu.in",
+          "website": "www.bethanybhopal.edu.in"
+        },
+        "codes": {
+          "affiliation": "1030568",
+          "udise": "23420111373"
+        }
+      }
+    },
+    {
+      "id": "STU009",
+      "name": "Aditya Joshi",
+      "class": "7",
+      "dob": "29-10-2005",
+      "contact": "2109876543",
+      "address": "753 Willow Avenue, Bhopal",
+      "photo": "https://via.placeholder.com/110x120?text=Aditya",
+      "school": {
+        "name": "BETHANY CONVENT SCHOOL",
+        "address": "DM-49, Indus Town, Bhopal",
+        "session": "2025-26",
+        "logo": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9b1d2966-1016-421f-b849-f0a5eb823572.png",
+        "building": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e5131ce2-1033-4096-8562-2a3300b0fa0c.png",
+        "contact": {
+          "phone": "0755-2897222",
+          "email": "info@bethanybhopal.edu.in",
+          "website": "www.bethanybhopal.edu.in"
+        },
+        "codes": {
+          "affiliation": "1030568",
+          "udise": "23420111373"
+        }
+      }
+    },
+    {
+      "id": "STU010",
+      "name": "Diya Reddy",
+      "class": "8",
+      "dob": "05-01-2005",
+      "contact": "1098765432",
+      "address": "852 Oak Street, Bhopal",
+      "photo": "https://via.placeholder.com/110x120?text=Diya",
+      "school": {
+        "name": "BETHANY CONVENT SCHOOL",
+        "address": "DM-49, Indus Town, Bhopal",
+        "session": "2025-26",
+        "logo": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9b1d2966-1016-421f-b849-f0a5eb823572.png",
+        "building": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e5131ce2-1033-4096-8562-2a3300b0fa0c.png",
+        "contact": {
+          "phone": "0755-2897222",
+          "email": "info@bethanybhopal.edu.in",
+          "website": "www.bethanybhopal.edu.in"
+        },
+        "codes": {
+          "affiliation": "1030568",
+          "udise": "23420111373"
+        }
+      }
+    },
+    {
+      "id": "STU011",
+      "name": "Arjun Malhotra",
+      "class": "9",
+      "dob": "12-06-2004",
+      "contact": "0987654321",
+      "address": "456 Pine Road, Bhopal",
+      "photo": "https://via.placeholder.com/110x120?text=Arjun",
+      "school": {
+        "name": "BETHANY CONVENT SCHOOL",
+        "address": "DM-49, Indus Town, Bhopal",
+        "session": "2025-26",
+        "logo": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9b1d2966-1016-421f-b849-f0a5eb823572.png",
+        "building": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e5131ce2-1033-4096-8562-2a3300b0fa0c.png",
+        "contact": {
+          "phone": "0755-2897222",
+          "email": "info@bethanybhopal.edu.in",
+          "website": "www.bethanybhopal.edu.in"
+        },
+        "codes": {
+          "affiliation": "1030568",
+          "udise": "23420111373"
+        }
+      }
+    },
+    {
+      "id": "STU012",
+      "name": "Mira Choudhary",
+      "class": "10",
+      "dob": "21-11-2003",
+      "contact": "9876543210",
+      "address": "753 Elm Avenue, Bhopal",
+      "photo": "https://via.placeholder.com/110x120?text=Mira",
+      "school": {
+        "name": "BETHANY CONVENT SCHOOL",
+        "address": "DM-49, Indus Town, Bhopal",
+        "session": "2025-26",
+        "logo": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9b1d2966-1016-421f-b849-f0a5eb823572.png",
+        "building": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e5131ce2-1033-4096-8562-2a3300b0fa0c.png",
+        "contact": {
+          "phone": "0755-2897222",
+          "email": "info@bethanybhopal.edu.in",
+          "website": "www.bethanybhopal.edu.in"
+        },
+        "codes": {
+          "affiliation": "1030568",
+          "udise": "23420111373"
+        }
+      }
+    },
+    {
+      "id": "STU013",
+      "name": "Rohan Kapoor",
+      "class": "11",
+      "dob": "08-04-2003",
+      "contact": "8765432109",
+      "address": "951 Maple Street, Bhopal",
+      "photo": "https://via.placeholder.com/110x120?text=Rohan",
+      "school": {
+        "name": "BETHANY CONVENT SCHOOL",
+        "address": "DM-49, Indus Town, Bhopal",
+        "session": "2025-26",
+        "logo": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9b1d2966-1016-421f-b849-f0a5eb823572.png",
+        "building": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e5131ce2-1033-4096-8562-2a3300b0fa0c.png",
+        "contact": {
+          "phone": "0755-2897222",
+          "email": "info@bethanybhopal.edu.in",
+          "website": "www.bethanybhopal.edu.in"
+        },
+        "codes": {
+          "affiliation": "1030568",
+          "udise": "23420111373"
+        }
+      }
+    },
+    {
+      "id": "STU014",
+      "name": "Anika Banerjee",
+      "class": "12",
+      "dob": "17-09-2002",
+      "contact": "7654321098",
+      "address": "357 Oak Lane, Bhopal",
+      "photo": "https://via.placeholder.com/110x120?text=Anika",
+      "school": {
+        "name": "BETHANY CONVENT SCHOOL",
+        "address": "DM-49, Indus Town, Bhopal",
+        "session": "2025-26",
+        "logo": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9b1d2966-1016-421f-b849-f0a5eb823572.png",
+        "building": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e5131ce2-1033-4096-8562-2a3300b0fa0c.png",
+        "contact": {
+          "phone": "0755-2897222",
+          "email": "info@bethanybhopal.edu.in",
+          "website": "www.bethanybhopal.edu.in"
+        },
+        "codes": {
+          "affiliation": "1030568",
+          "udise": "23420111373"
+        }
+      }
+    },
+    {
+      "id": "STU015",
+      "name": "Kabir Saxena",
+      "class": "Nursery",
+      "dob": "24-02-2011",
+      "contact": "6543210987",
+      "address": "753 Cedar Road, Bhopal",
+      "photo": "https://via.placeholder.com/110x120?text=Kabir",
+      "school": {
+        "name": "BETHANY CONVENT SCHOOL",
+        "address": "DM-49, Indus Town, Bhopal",
+        "session": "2025-26",
+        "logo": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9b1d2966-1016-421f-b849-f0a5eb823572.png",
+        "building": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e5131ce2-1033-4096-8562-2a3300b0fa0c.png",
+        "contact": {
+          "phone": "0755-2897222",
+          "email": "info@bethanybhopal.edu.in",
+          "website": "www.bethanybhopal.edu.in"
+        },
+        "codes": {
+          "affiliation": "1030568",
+          "udise": "23420111373"
+        }
+      }
+    },
+    {
+      "id": "STU016",
+      "name": "Neha Trivedi",
+      "class": "KG",
+      "dob": "30-07-2010",
+      "contact": "5432109876",
+      "address": "159 Birch Avenue, Bhopal",
+      "photo": "https://via.placeholder.com/110x120?text=Neha",
+      "school": {
+        "name": "BETHANY CONVENT SCHOOL",
+        "address": "DM-49, Indus Town, Bhopal",
+        "session": "2025-26",
+        "logo": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9b1d2966-1016-421f-b849-f0a5eb823572.png",
+        "building": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e5131ce2-1033-4096-8562-2a3300b0fa0c.png",
+        "contact": {
+          "phone": "0755-2897222",
+          "email": "info@bethanybhopal.edu.in",
+          "website": "www.bethanybhopal.edu.in"
+        },
+        "codes": {
+          "affiliation": "1030568",
+          "udise": "23420111373"
+        }
+      }
+    },
+    {
+      "id": "STU017",
+      "name": "Vivaan Iyer",
+      "class": "1",
+      "dob": "13-12-2009",
+      "contact": "4321098765",
+      "address": "852 Willow Street, Bhopal",
+      "photo": "https://via.placeholder.com/110x120?text=Vivaan",
+      "school": {
+        "name": "BETHANY CONVENT SCHOOL",
+        "address": "DM-49, Indus Town, Bhopal",
+        "session": "2025-26",
+        "logo": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9b1d2966-1016-421f-b849-f0a5eb823572.png",
+        "building": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e5131ce2-1033-4096-8562-2a3300b0fa0c.png",
+        "contact": {
+          "phone": "0755-2897222",
+          "email": "info@bethanybhopal.edu.in",
+          "website": "www.bethanybhopal.edu.in"
+        },
+        "codes": {
+          "affiliation": "1030568",
+          "udise": "23420111373"
+        }
+      }
+    },
+    {
+      "id": "STU018",
+      "name": "Meera Nair",
+      "class": "2",
+      "dob": "06-05-2009",
+      "contact": "3210987654",
+      "address": "456 Pine Lane, Bhopal",
+      "photo": "https://via.placeholder.com/110x120?text=Meera",
+      "school": {
+        "name": "BETHANY CONVENT SCHOOL",
+        "address": "DM-49, Indus Town, Bhopal",
+        "session": "2025-26",
+        "logo": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9b1d2966-1016-421f-b849-f0a5eb823572.png",
+        "building": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e5131ce2-1033-4096-8562-2a3300b0fa0c.png",
+        "contact": {
+          "phone": "0755-2897222",
+          "email": "info@bethanybhopal.edu.in",
+          "website": "www.bethanybhopal.edu.in"
+        },
+        "codes": {
+          "affiliation": "1030568",
+          "udise": "23420111373"
+        }
+      }
+    },
+    {
+      "id": "STU019",
+      "name": "Aryan Desai",
+      "class": "3",
+      "dob": "19-08-2008",
+      "contact": "2109876543",
+      "address": "753 Elm Road, Bhopal",
+      "photo": "https://via.placeholder.com/110x120?text=Aryan",
+      "school": {
+        "name": "BETHANY CONVENT SCHOOL",
+        "address": "DM-49, Indus Town, Bhopal",
+        "session": "2025-26",
+        "logo": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9b1d2966-1016-421f-b849-f0a5eb823572.png",
+        "building": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e5131ce2-1033-4096-8562-2a3300b0fa0c.png",
+        "contact": {
+          "phone": "0755-2897222",
+          "email": "info@bethanybhopal.edu.in",
+          "website": "www.bethanybhopal.edu.in"
+        },
+        "codes": {
+          "affiliation": "1030568",
+          "udise": "23420111373"
+        }
+      }
+    },
+    {
+      "id": "STU020",
+      "name": "Ishita Rao",
+      "class": "4",
+      "dob": "02-01-2008",
+      "contact": "1098765432",
+      "address": "951 Maple Avenue, Bhopal",
+      "photo": "https://via.placeholder.com/110x120?text=Ishita",
+      "school": {
+        "name": "BETHANY CONVENT SCHOOL",
+        "address": "DM-49, Indus Town, Bhopal",
+        "session": "2025-26",
+        "logo": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9b1d2966-1016-421f-b849-f0a5eb823572.png",
+        "building": "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e5131ce2-1033-4096-8562-2a3300b0fa0c.png",
+        "contact": {
+          "phone": "0755-2897222",
+          "email": "info@bethanybhopal.edu.in",
+          "website": "www.bethanybhopal.edu.in"
+        },
+        "codes": {
+          "affiliation": "1030568",
+          "udise": "23420111373"
+        }
+      }
+    }
+  ]
+}
