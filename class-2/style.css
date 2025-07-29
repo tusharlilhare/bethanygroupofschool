@@ -1,0 +1,99 @@
+/* Add this at the end of your existing style.css file */
+
+/* New styles for showing both sides of ID card */
+.card-container {
+    perspective: none; /* Remove 3D effect */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.card-inner {
+    transform: none !important; /* Disable flip animation */
+    display: flex; /* Show front and back side by side */
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+}
+
+.card-front, .card-back {
+    position: relative;
+    backface-visibility: visible;
+    transform: none !important;
+    flex: 1;
+    min-width: 280px;
+    height: 420px;
+}
+
+/* Bethany Convent School specific styles */
+.school-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a2a6c;
+    text-transform: uppercase;
+}
+
+.card-header {
+    background: #f8f9fa;
+    padding: 10px;
+    border-bottom: 2px solid #1a2a6c;
+}
+
+.card-front {
+    background: white;
+    color: #333;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.card-back {
+    background: #f5f5f5;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.id-number {
+    background: #1a2a6c;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.student-name {
+    color: #1a2a6c;
+    border-bottom: 2px solid #1a2a6c;
+}
+
+.detail-label {
+    color: #555;
+}
+
+/* Signature style */
+.signature-area {
+    margin-top: 15px;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.signature-line {
+    border-top: 1px solid #333;
+    width: 80%;
+    margin-left: auto;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* School info footer */
+.school-footer {
+    font-size: 10px;
+    text-align: center;
+    margin-top: 10px;
+    color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-front, .card-back {
+        min-width: 100%;
+    }
+}

@@ -1,0 +1,112 @@
+[
+    {
+        "id": "STU2025001",
+        "name": "Raj Sharma",
+        "class": "10-A",
+        "roll": "25",
+        "dob": "15/08/2009",
+        "blood": "O+",
+        "father": "Amit Sharma",
+        "address": "12 Gandhi Road, Delhi",
+        "valid": "31/05/2026"
+    },
+    {
+        "id": "STU2025002",
+        "name": "Priya Patel",
+        "class": "9-B",
+        "roll": "12",
+        "dob": "22/03/2010",
+        "blood": "B+",
+        "father": "Sanjay Patel",
+        "address": "34 Nehru Street, Mumbai",
+        "valid": "31/05/2026"
+    },
+    {
+        "id": "STU2025003",
+        "name": "Amit Kumar",
+        "class": "11-C",
+        "roll": "08",
+        "dob": "05/12/2008",
+        "blood": "A+",
+        "father": "Vijay Kumar",
+        "address": "56 Tagore Lane, Kolkata",
+        "valid": "31/05/2026"
+    },
+    {
+        "id": "STU2025004",
+        "name": "Sneha Singh",
+        "class": "12-A",
+        "roll": "03",
+        "dob": "18/07/2007",
+        "blood": "AB+",
+        "father": "Rajesh Singh",
+        "address": "78 Bose Road, Chennai",
+        "valid": "31/05/2026"
+    },
+    {
+        "id": "STU2025005",
+        "name": "Vikram Mehta",
+        "class": "8-B",
+        "roll": "19",
+        "dob": "30/01/2011",
+        "blood": "O-",
+        "father": "Anil Mehta",
+        "address": "90 Patel Nagar, Bangalore",
+        "valid": "31/05/2026"
+    },
+    {
+        "id": "STU2025006",
+        "name": "Ananya Das",
+        "class": "10-C",
+        "roll": "07",
+        "dob": "12/09/2009",
+        "blood": "A-",
+        "father": "Sourav Das",
+        "address": "112 Vivekananda Road, Hyderabad",
+        "valid": "31/05/2026"
+    },
+    {
+        "id": "STU2025007",
+        "name": "Rahul Verma",
+        "class": "9-A",
+        "roll": "15",
+        "dob": "25/04/2010",
+        "blood": "B-",
+        "father": "Manoj Verma",
+        "address": "134 Gandhi Nagar, Pune",
+        "valid": "31/05/2026"
+    },
+    {
+        "id": "STU2025008",
+        "name": "Neha Gupta",
+        "class": "11-B",
+        "roll": "22",
+        "dob": "08/11/2008",
+        "blood": "O+",
+        "father": "Rajiv Gupta",
+        "address": "156 Nehru Place, Jaipur",
+        "valid": "31/05/2026"
+    },
+    {
+        "id": "STU2025009",
+        "name": "Arjun Reddy",
+        "class": "12-C",
+        "roll": "11",
+        "dob": "19/02/2007",
+        "blood": "A+",
+        "father": "Vikram Reddy",
+        "address": "178 Tagore Street, Ahmedabad",
+        "valid": "31/05/2026"
+    },
+    {
+        "id": "STU2025010",
+        "name": "Pooja Mishra",
+        "class": "8-A",
+        "roll": "05",
+        "dob": "14/06/2011",
+        "blood": "AB-",
+        "father": "Avinash Mishra",
+        "address": "190 Bose Lane, Lucknow",
+        "valid": "31/05/2026"
+    }
+]
