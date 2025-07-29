@@ -11,8 +11,14 @@ fetch('data.json')
 // Function to generate ID cards
 function generateIDCards(students) {
     const cardsContainer = document.getElementById('cardsContainer');
+    const currentUrl = new URL(window.location.href);
     
     students.forEach(student => {
+        // Create shareable URL for this student
+        const shareUrl = new URL(currentUrl);
+        shareUrl.searchParams.set('qrdata', encodeURIComponent(JSON.stringify(student)));
+        shareUrl.hash = 'verification';
+        
         // Create front side card
         const frontCard = document.createElement('article');
         frontCard.className = 'id-card';
@@ -26,7 +32,7 @@ function generateIDCards(students) {
             <section class="body-section">
                 <div class="qr-code" aria-hidden="true">
                     <img 
-                        src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(JSON.stringify(student))}" 
+                        src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(shareUrl.toString())}" 
                         alt="QR code for student information"
                     />
                     <p>Sector id: ${student.school.codes.udise.substring(7)}</p>
@@ -111,6 +117,7 @@ function displayStudentData(student) {
         verificationDetails.innerHTML = '';
         photoPlaceholder.innerHTML = 'Student Photo';
         statusText.textContent = 'Invalid QR code. Please scan a valid student ID QR code.';
+        statusText.style.color = '#e74c3c';
         return;
     }
     
@@ -157,6 +164,7 @@ function displayStudentData(student) {
     `;
     
     statusText.textContent = `Student verified: ${student.name} (${student.id})`;
+    statusText.style.color = '#27ae60';
 }
 
 // Function to initialize QR scanner
@@ -184,11 +192,20 @@ function initQRScanner() {
             qrbox: { width: 250, height: 250 },
             rememberLastUsedCamera: true
         },
-        /* verbose= */ false
+        false
     );
     
     scanner.render((decodedText) => {
         try {
+            // Create a URL with the QR data as a parameter
+            const url = new URL(window.location.href);
+            url.searchParams.set('qrdata', encodeURIComponent(decodedText));
+            url.hash = 'verification';
+            
+            // Update the URL without reloading the page
+            window.history.pushState({}, '', url);
+            
+            // Parse and display the student data
             const studentData = JSON.parse(decodedText);
             displayStudentData(studentData);
             
@@ -225,8 +242,23 @@ function checkUrlForStudentData() {
             
             const studentData = JSON.parse(decodeURIComponent(qrData));
             displayStudentData(studentData);
+            
+            // Clear the scanner if it exists
+            const qrScannerContainer = document.getElementById('qr-scanner-container');
+            qrScannerContainer.innerHTML = '';
+            
+            // Add rescan button
+            const rescanBtn = document.createElement('button');
+            rescanBtn.className = 'action-btn print';
+            rescanBtn.innerHTML = '<i class="fas fa-qrcode"></i> Rescan QR Code';
+            rescanBtn.onclick = () => {
+                qrScannerContainer.innerHTML = '';
+                initQRScanner();
+            };
+            qrScannerContainer.appendChild(rescanBtn);
         } catch (e) {
             console.error('Error parsing URL QR data:', e);
+            displayStudentData(null);
         }
     }
 }
