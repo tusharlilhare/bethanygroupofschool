@@ -6,7 +6,7 @@
 }
 
 body {
-    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #1a2a6c);
+    background: #f5f5f5;
     color: #333;
     padding: 10px;
     min-height: 100vh;
@@ -23,24 +23,23 @@ header {
     text-align: center;
     margin-bottom: 20px;
     padding: 15px;
-    background: rgba(255, 255, 255, 0.95);
+    background: #fff;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    border: 2px solid #ffd700;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e0e0e0;
 }
 
 h1 {
-    color: #1a2a6c;
+    color: #2c3e50;
     margin-bottom: 8px;
     font-size: 1.8rem;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 .subtitle {
-    color: #b21f1f;
+    color: #7f8c8d;
     font-size: 1rem;
     margin-bottom: 15px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 /* Tab Styles */
@@ -53,23 +52,23 @@ h1 {
 }
 
 .tab-btn {
-    background: #1a2a6c;
-    color: white;
-    border: none;
+    background: #ecf0f1;
+    color: #2c3e50;
+    border: 1px solid #ddd;
     padding: 8px 15px;
     font-size: 0.9rem;
     border-radius: 20px;
     cursor: pointer;
     transition: all 0.3s;
-    font-weight: 600;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 2px;
+    font-weight: 500;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .tab-btn.active {
-    background: linear-gradient(to right, #b21f1f, #d62828);
+    background: #3498db;
+    color: white;
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .tab-content {
@@ -90,7 +89,7 @@ h1 {
 }
 
 .action-btn {
-    background: linear-gradient(to right, #1a2a6c, #3a5fcd);
+    background: #3498db;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -98,8 +97,8 @@ h1 {
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s;
-    font-weight: 600;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     gap: 5px;
@@ -108,18 +107,18 @@ h1 {
 
 .action-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
 .action-btn.print {
-    background: linear-gradient(to right, #27ae60, #2ecc71);
+    background: #27ae60;
 }
 
 .action-btn.download {
-    background: linear-gradient(to right, #2980b9, #3498db);
+    background: #2980b9;
 }
 
-/* Card Styles (Front + Back) */
+/* Card Styles (Front + Back) - Modified to show both sides */
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -128,52 +127,38 @@ h1 {
 }
 
 .card-container {
-    perspective: 1000px;
-    height: 420px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .card-inner {
-    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
     width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-}
-
-.card-container:hover .card-inner {
-    transform: rotateY(180deg);
 }
 
 .card-front, .card-back {
-    position: absolute;
     width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+    height: 420px;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
 }
 
 .card-front {
-    background: linear-gradient(135deg, #1a2a6c, #3a5fcd);
-    color: white;
-    border: 3px solid #ffd700;
-    display: flex;
-    flex-direction: column;
+    background: #fff;
+    color: #2c3e50;
+    border: 1px solid #ddd;
 }
 
 .card-back {
-    background: linear-gradient(135deg, #b21f1f, #d62828);
-    color: white;
-    transform: rotateY(180deg);
-    border: 3px solid #ffd700;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
+    background: #f9f9f9;
+    color: #2c3e50;
+    border: 1px solid #ddd;
 }
 
 /* QR Code on Front (Mobile Only) */
@@ -183,18 +168,17 @@ h1 {
 
 /* Card Content */
 .card-header {
-    background: rgba(0, 0, 0, 0.25);
+    background: #3498db;
+    color: white;
     padding: 10px;
     text-align: center;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .school-name {
     font-size: 18px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 .card-body {
@@ -214,15 +198,14 @@ h1 {
 .student-photo {
     width: 100px;
     height: 120px;
-    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-    border: 2px solid white;
+    background: #ecf0f1;
+    border: 1px solid #ddd;
     border-radius: 5px;
     margin-bottom: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .student-photo img {
@@ -232,32 +215,31 @@ h1 {
 }
 
 .photo-placeholder {
-    color: #6c757d;
+    color: #95a5a6;
     font-size: 12px;
     text-align: center;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .id-number {
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-    background: rgba(0, 0, 0, 0.3);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    background: #ecf0f1;
     padding: 5px;
     border-radius: 3px;
     margin-top: 5px;
     font-size: 14px;
+    color: #2c3e50;
 }
 
 .student-name {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
     text-align: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid #eee;
     padding-bottom: 8px;
+    color: #2c3e50;
 }
 
 .student-details {
@@ -271,15 +253,18 @@ h1 {
     display: flex;
     justify-content: space-between;
     font-size: 14px;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
 }
 
 .detail-label {
     font-weight: 600;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    color: #7f8c8d;
 }
 
 .detail-value {
     font-weight: 500;
+    color: #2c3e50;
 }
 
 .card-footer {
@@ -287,14 +272,15 @@ h1 {
     justify-content: space-between;
     align-items: center;
     padding: 8px 15px;
-    background: rgba(0, 0, 0, 0.25);
+    background: #ecf0f1;
     font-size: 12px;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid #ddd;
+    color: #7f8c8d;
 }
 
 .validity {
     font-style: italic;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 /* QR Code Styles */
@@ -305,29 +291,34 @@ h1 {
     border-radius: 8px;
     padding: 10px;
     margin-bottom: 15px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
 }
 
 .qr-label {
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     margin-top: 10px;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    color: #7f8c8d;
 }
 
 /* Verification Section */
 .verification-section {
-    background: rgba(255, 255, 255, 0.95);
+    background: #fff;
     padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     margin-top: 20px;
-    border: 2px solid #27ae60;
+    border: 1px solid #ddd;
     text-align: center;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 767px) {
+    .card-inner {
+        flex-direction: column;
+    }
+    
     .card-front .qr-code {
         display: block;
         width: 80px;
@@ -336,6 +327,7 @@ h1 {
         bottom: 10px;
         right: 10px;
     }
+    
     .card-back .qr-code {
         width: 120px;
         height: 120px;
@@ -363,6 +355,14 @@ h1 {
     .student-photo {
         width: 120px;
         height: 140px;
+    }
+    
+    .card-inner {
+        flex-direction: row;
+    }
+    
+    .card-front, .card-back {
+        width: 50%;
     }
 }
 
@@ -407,14 +407,10 @@ h1 {
     }
     .card-container {
         height: auto;
-        perspective: none;
-        break-inside: avoid;
     }
     .card-inner {
-        transform: none !important;
-        height: auto;
-        display: flex;
         flex-direction: row;
+        height: auto;
     }
     .card-front, .card-back {
         position: relative;
@@ -434,10 +430,4 @@ h1 {
         bottom: 5px;
         right: 5px;
     }
-}@media (max-width: 767px) {
-    .card-front .qr-code { display: block; }
-}
-@media print {
-    .card-inner { flex-direction: row; }
-    .card-front, .card-back { width: 50%; }
 }
