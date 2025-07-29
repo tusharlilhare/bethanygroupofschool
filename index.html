@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student ID Card Generator</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: #f5f7fa;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        .subtitle {
+            color: #7f8c8d;
+            font-weight: 500;
+        }
+        .class-selection {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            max-width: 800px;
+            margin-top: 2rem;
+        }
+        .class-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        .class-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .class-card h2 {
+            color: #3498db;
+            margin-bottom: 0.5rem;
+        }
+        .class-card p {
+            color: #7f8c8d;
+        }
+        .logo {
+            width: 120px;
+            margin-bottom: 1rem;
+        }
+        @media (max-width: 600px) {
+            .class-selection {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/school-logo.png" alt="School Logo" class="logo">
+        <h1>Student ID Card Generator</h1>
+        <p class="subtitle">Select a class to view ID cards</p>
+    </header>
+    
+    <div class="class-selection">
+        <div class="class-card" onclick="window.location.href='class-1/index.html'">
+            <h2>Class 1</h2>
+            <p>100 Students</p>
+        </div>
+        <div class="class-card" onclick="window.location.href='class-2/index.html'">
+            <h2>Class 2</h2>
+            <p>100 Students</p>
+        </div>
+        <div class="class-card" onclick="window.location.href='class-3/index.html'">
+            <h2>Class 3</h2>
+            <p>100 Students</p>
+        </div>
+        <div class="class-card" onclick="window.location.href='class-4/index.html'">
+            <h2>Class 4</h2>
+            <p>100 Students</p>
+        </div>
+    </div>
+</body>
+</html>

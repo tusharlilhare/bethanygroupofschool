@@ -1,0 +1,104 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student ID Card Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Student ID Card Generator</h1>
+  
+  <div class="card-container" id="card-container">
+    <!-- Cards will be generated here by JavaScript -->
+  <!-- </div>
+
+  <button class="download-btn">Download All ID Cards</button>
+
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+  <!-- Add QR Scanner Library -->
+<!-- <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+</body>
+</html> --> --> -->
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Student ID Card System</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-id-card"></i> School Student ID Card System</h1>
+            <p class="subtitle">Generate, Print, and Verify Student ID Cards</p>
+        </header>
+        
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="id-cards">ID Cards</button>
+            <button class="tab-btn" data-tab="verification">QR Verification</button>
+        </div>
+        
+        <div class="tab-content active" id="id-cards">
+            <div class="actions">
+                <button class="action-btn print" onclick="window.print()">
+                    <i class="fas fa-print"></i> Print All ID Cards
+                </button>
+                <button class="action-btn download" id="downloadAll">
+                    <i class="fas fa-download"></i> Download All QR Codes
+                </button>
+            </div>
+            
+            <div id="singleCardContainer" class="single-card-view" style="display: none;">
+                <!-- Single card will be shown here when viewing from QR link -->
+            </div>
+            
+            <div class="card-grid" id="cardsContainer">
+                <!-- ID Cards will be generated here -->
+            </div>
+        </div>
+        
+        <div class="tab-content" id="verification">
+            <div class="verification-section">
+                <div class="verification-content">
+                    <div class="verification-header">
+                        <h2 class="verification-title">Student ID Verification</h2>
+                        <p class="verification-subtitle">Scan QR Code to View Student Information</p>
+                    </div>
+                    
+                    <div class="verification-grid">
+                        <div class="verification-photo">
+                            <div class="photo-placeholder">Student Photo</div>
+                        </div>
+                        
+                        <div class="verification-details" id="verificationDetails">
+                            <!-- Verification details will appear here -->
+                        </div>
+                    </div>
+                    
+                    <div class="verification-status">
+                        <p class="status-text" id="statusText">Scan a student ID QR code to verify information</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

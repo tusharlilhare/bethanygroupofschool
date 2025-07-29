@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bethany Convent School ID Card</title>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+  h1 {
+    color: #2d3436;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .card-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+    max-width: 100%;
+  }
+  .id-card {
+    background: #ffffff;
+    width: 320px;
+    height: 500px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border: 1px solid #dfe6e9;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .header {
+    background: linear-gradient(135deg, #fdcb6e 40%, #00b894 40%);
+    color: #d63031;
+    padding: 1rem 1.25rem 1.4rem;
+    font-weight: 700;
+    font-size: 1.35rem;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    user-select: none;
+    border-bottom: 1px solid #dfe6e9;
+  }
+  .sub-header {
+    font-weight: 500;
+    font-size: 0.8rem;
+    color: #b33939;
+    margin-top: 2px;
+  }
+  .body-section {
+    background: #fff;
+    padding: 1rem 1.5rem;
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 1rem;
+    height: calc(100% - 80px);
+  }
+  .qr-code {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .qr-code img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    border: 1px solid #b2bec3;
+    border-radius: 8px;
+    background: #f5f6fa;
+    padding: 6px;
+  }
+  .qr-code p {
+    font-size: 0.7rem;
+    margin-top: 5px;
+    text-align: center;
+    color: #636e72;
+  }
+  .photo {
+    width: 110px;
+    height: 120px;
+    border: 1px solid #b2bec3;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-left: auto;
+    background: #f5f6fa;
+  }
+  .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+  .details {
+    display: flex;
+    flex-direction: column;
+    grid-column: span 2;
+  }
+  .chairman-sign {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.8rem;
+    color: #636e72;
+    margin-top: 4px;
+  }
+  .chairman-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #2d3436;
+  }
+  .name {
+    margin: 8px 0;
+    color: #0984e3;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0.03em;
+  }
+  .info-list {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: #2d3436;
+    margin-top: 5px;
+  }
+  .info-item {
+    display: flex;
+    margin-bottom: 3px;
+  }
+  .info-label {
+    color: #2d3436;
+    font-weight: 600;
+    min-width: 70px;
+  }
+  .info-value {
+    font-weight: 500;
+    margin-left: 5px;
+    color: #636e72;
+  }
+  .address-value {
+    display: block;
+    margin-left: 75px;
+    margin-top: -16px;
+    line-height: 1.3;
+  }
+  
+  /* Back Side Styles */
+  .id-card.back {
+    background: linear-gradient(to bottom, #f5f6fa, #dfe6e9);
+    color: #2d3436;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #b2bec3;
+  }
+  .back-logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+    object-fit: contain;
+    filter: brightness(0.9);
+  }
+  .back-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #00b894;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .back-school-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 10px 0;
+    border: 1px solid #b2bec3;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  .back-info {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-top: 10px;
+    color: #2d3436;
+  }
+  .back-contact {
+    margin-top: 15px;
+    font-size: 0.8rem;
+    color: #636e72;
+  }
+  
+  /* Download Button */
+  .download-btn {
+    padding: 12px 30px;
+    background: linear-gradient(to right, #00b894, #0984e3);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  .download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  }
+  
+  @media (max-width: 400px) {
+    body {
+      padding: 1rem;
+    }
+    .id-card {
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+    }
+    .body-section {
+      grid-template-columns: 1fr 1fr;
+    }
+    .photo {
+      margin-left: 0;
+      justify-self: center;
+    }
+  }
+</style>
+</head>
+<body>
+  <h1>Bethany Convent School ID Card</h1>
+  
+  <div class="card-container" id="full-card">
+    <!-- Front Side -->
+    <article class="id-card" id="front-card">
+      <header class="header">
+        BETHANY CONVENT SCHOOL
+        <div class="sub-header" aria-label="Address">DM-49, Indus Town, Bhopal 
+          <p>session: 2025-26</p>
+        </div>
+      </header>
+      <section class="body-section">
+        <div class="qr-code" aria-hidden="true">
+          <img 
+            src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=BethanyConventSchool-KanakSarathe-Nursery-DOB:15-08-2010-Contact:7909385310" 
+            alt="QR code for student information"
+            />
+          <p>Sector id: 1373</p>
+        </div>
+        <div class="photo" aria-label="Photo of Kanak Sarathe">
+          <img 
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f6f41e04-143f-4f57-9559-9919ae136766.png" 
+            alt="Portrait photo of Kanak Sarathe, female teacher wearing traditional attire with earrings" 
+            onerror="this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/05ed4d1c-9b84-4d8c-bf49-8053f5628052.png';"
+            />
+        </div>
+        <div class="details">
+          <div>
+            <div class="chairman-sign" aria-label="Chairman signature">[signature]</div>
+            <div class="chairman-title">Principal</div>
+          </div>
+          <h1 class="name">KANAK SARATHE</h1>
+          <div class="info-list">
+            <div class="info-item">
+              <span class="info-label">Class:</span>
+              <span class="info-value">Nursery</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Name:</span>
+              <span class="info-value">Dinesh Lilhare</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Contact:</span>
+              <span class="info-value">7909385310</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">DOB:</span>
+              <span class="info-value">15-08-2010</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Address:</span>
+            </div>
+            <span class="address-value">
+              Bethany Convent School,<br />
+              DM 49 Phase II Indus Town,<br />
+              Ratanpur Bhopal
+            </span>
+          </div>
+        </div>
+      </section>
+    </article>
+
+    <!-- Back Side -->
+    <article class="id-card back" id="back-card">
+      <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9b1d2966-1016-421f-b849-f0a5eb823572.png" 
+           alt="School Logo" 
+           class="back-logo">
+      <h2 class="back-title">BETHANY CONVENT SCHOOL</h2>
+      <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e5131ce2-1033-4096-8562-2a3300b0fa0c.png" 
+           alt="School Building" 
+           class="back-school-img">
+      <div class="back-info">
+        <p>DM-49, Phase II Indus Town</p>
+        <p>Ratanpur, Bhopal (M.P.)</p>
+        <p>Affiliation No.: 1030568</p>
+        <p>UDISE Code: 23420111373</p>
+      </div>
+      <div class="back-contact">
+        <p>Phone: 0755-2897222</p>
+        <p>Email: info@bethanybhopal.edu.in</p>
+        <p>Website: www.bethanybhopal.edu.in</p>
+      </div>
+    </article>
+  </div>
+
+  <button class="download-btn" onclick="downloadFullCard()">Download ID Card (Both Sides)</button>
+
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <script>
+    function downloadFullCard() {
+      const container = document.getElementById('full-card');
+      
+      // Show loading state
+      const btn = document.querySelector('.download-btn');
+      btn.disabled = true;
+      btn.innerHTML = 'Generating...';
+      
+      html2canvas(container, {
+        scale: 2,
+        logging: false,
+        useCORS: true,
+        allowTaint: true,
+        width: 680,
+        height: 520,
+        windowWidth: 680,
+        windowHeight: 520
+      }).then(canvas => {
+        const link = document.createElement('a');
+        link.download = 'Bethany_ID_Card_Front_Back.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+        
+        // Reset button
+        btn.disabled = false;
+        btn.innerHTML = 'Download ID Card (Both Sides)';
+      });
+    }
+  </script>
+</body>
+</html>
