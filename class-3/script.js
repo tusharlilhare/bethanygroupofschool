@@ -5,6 +5,7 @@ fetch('data.json')
         const students = data.students;
         generateIDCards(students);
         setupEventListeners();
+        checkUrlForStudentData(students); // <-- Pass students here
     })
     .catch(error => console.error('Error loading student data:', error));
 
@@ -19,10 +20,6 @@ function generateIDCards(students) {
     }
 
     students.forEach(student => {
-        const shareUrl = new URL(currentUrl);
-        shareUrl.searchParams.set('qrdata', encodeURIComponent(JSON.stringify(student)));
-        shareUrl.hash = 'verification';
-
         const frontCard = document.createElement('article');
         frontCard.className = 'id-card';
         frontCard.innerHTML = `
@@ -83,44 +80,39 @@ function generateIDCards(students) {
         cardsContainer.appendChild(frontCard);
         cardsContainer.appendChild(backCard);
 
-        // Generate QR code for student
         generateQRCodeForStudent(student);
     });
 }
 
-// Generate QR Code
+// Generate QR code containing student ID URL
 function generateQRCodeForStudent(student) {
     const qrContainer = document.getElementById(`qr-${student.id}`);
-    if (qrContainer) {
-        qrContainer.innerHTML = '';
+    if (!qrContainer) return;
 
-        const verificationUrl = `${window.location.origin}${window.location.pathname}?qrdata=${encodeURIComponent(JSON.stringify(student))}`;
-        
-        new QRCode(qrContainer, {
-            text: verificationUrl,
-            width: 90,
-            height: 90,
-            colorDark: "#000000",
-            colorLight: "#ffffff",
-            correctLevel: QRCode.CorrectLevel.H
-        });
+    const url = `${window.location.origin}${window.location.pathname}?id=${student.id}`;
+    qrContainer.innerHTML = '';
 
-        // Simulate scan on click
-        qrContainer.addEventListener('click', () => {
-            showVerification(student);
-        });
-    }
+    new QRCode(qrContainer, {
+        text: url,
+        width: 90,
+        height: 90,
+        colorDark: "#000000",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H
+    });
+
+    qrContainer.addEventListener('click', () => {
+        window.open(url, '_blank');
+    });
 }
 
-// Show verification details
+// Show student verification data
 function showVerification(student) {
     document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
     document.querySelector('[data-tab="verification"]').classList.add('active');
 
     document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
     document.getElementById('verification').classList.add('active');
-
-    document.getElementById('verification').scrollIntoView({ behavior: 'smooth' });
 
     const roll = student.roll || 'N/A';
     const blood = student.blood || 'N/A';
@@ -159,79 +151,33 @@ function showVerification(student) {
     document.getElementById('statusText').innerHTML = `<i class="fas fa-check-circle"></i> ID Verified Successfully!`;
 }
 
-// Scanner init (if needed)
-function initQRScanner() {
-    const qrScannerContainer = document.getElementById('qr-scanner-container');
-    qrScannerContainer.innerHTML = '';
-
-    if (!document.getElementById('verification').classList.contains('active')) return;
-
-    if (typeof Html5QrcodeScanner === 'undefined') {
-        qrScannerContainer.innerHTML = '<p>QR scanner library not loaded. Please refresh the page.</p>';
-        console.warn('QR scanner library not loaded');
-        return;
-    }
-
-    const scanner = new Html5QrcodeScanner("qr-scanner-container", {
-        fps: 10,
-        qrbox: { width: 250, height: 250 },
-        rememberLastUsedCamera: true
-    }, false);
-
-    scanner.render((decodedText) => {
-        try {
-            const studentData = JSON.parse(decodedText);
-            showVerification(studentData);
-            scanner.clear();
-        } catch (e) {
-            console.error('Error parsing QR code data:', e);
-        }
-    }, (error) => {
-        console.warn('QR scan error:', error);
-    });
-}
-
-// Load QR from URL if exists
-function checkUrlForStudentData() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const qrData = urlParams.get('qrdata');
-
-    if (qrData) {
-        try {
-            document.querySelector('[data-tab="verification"]').click();
-            const studentData = JSON.parse(decodeURIComponent(qrData));
-            showVerification(studentData);
-            document.getElementById('qr-scanner-container').innerHTML = '';
-        } catch (e) {
-            console.error('Invalid QR data in URL:', e);
-        }
-    }
-}
-
-// Setup tab events
+// Setup tab switching
 function setupEventListeners() {
     document.querySelectorAll('.tab-btn').forEach(button => {
         button.addEventListener('click', () => {
             const tabId = button.getAttribute('data-tab');
             document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
             document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
-
             button.classList.add('active');
             document.getElementById(tabId).classList.add('active');
-
-            if (tabId === 'verification') {
-                initQRScanner();
-            }
         });
     });
 
     document.getElementById('downloadAll').addEventListener('click', () => {
-        alert('Download feature not implemented yet.');
+        alert('Download all QR codes feature is not implemented.');
     });
 }
 
-// Init when DOM ready
-document.addEventListener('DOMContentLoaded', () => {
-    checkUrlForStudentData();
-    setupEventListeners();
-});
+// Check ?id=... in URL and verify student
+function checkUrlForStudentData(students) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const studentId = urlParams.get('id');
+    if (studentId) {
+        const student = students.find(s => s.id === studentId);
+        if (student) {
+            showVerification(student);
+        } else {
+            document.getElementById('statusText').innerText = 'Invalid student ID';
+        }
+    }
+}
