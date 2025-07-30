@@ -122,6 +122,7 @@ function showVerification(student) {
     const detailsHtml = `
         <div class="detail-card">
             <h3>Student Information</h3>
+            <p><strong>photo:</strong> ${student.photo}</p>
             <p><strong>Name:</strong> ${student.name}</p>
             <p><strong>Class:</strong> ${student.class}</p>
             <p><strong>Roll No:</strong> ${roll}</p>
