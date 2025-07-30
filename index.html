@@ -1,98 +1,338 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student ID Card Generator</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        body {
-            background: #f5f7fa;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-            padding: 2rem;
-        }
-        header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 0.5rem;
-        }
-        .subtitle {
-            color: #7f8c8d;
-            font-weight: 500;
-        }
-        .class-selection {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.5rem;
-            max-width: 800px;
-            margin-top: 2rem;
-        }
-        .class-card {
-            background: white;
-            border-radius: 10px;
-            padding: 2rem;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
-        }
-        .class-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-        .class-card h2 {
-            color: #3498db;
-            margin-bottom: 0.5rem;
-        }
-        .class-card p {
-            color: #7f8c8d;
-        }
-        .logo {
-            width: 120px;
-            margin-bottom: 1rem;
-        }
-        @media (max-width: 600px) {
-            .class-selection {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <title>Bright Future Academy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <img src="images/school-logo.png" alt="School Logo" class="logo">
-        <h1>Student ID Card Generator</h1>
-        <p class="subtitle">Select a class to view ID cards</p>
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" class="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <h1>Bright Future <span>Academy</span></h1>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#facilities">Facilities</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                        <li><a href="./class.html">QR</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
     </header>
-    
-    <div class="class-selection">
-        <div class="class-card" onclick="window.location.href='class-1/index.html'">
-            <h2>Class 1</h2>
-            <p>100 Students</p>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="animate-slide-in">Shaping <span>Future</span> Leaders</h2>
+                <p class="animate-slide-in">Providing quality education with modern facilities and experienced faculty to nurture young minds.</p>
+                <a href="#contact" class="btn animate-slide-in">Enroll Now</a>
+            </div>
+           
         </div>
-        <div class="class-card" onclick="window.location.href='class-2/index.html'">
-            <h2>Class 2</h2>
-            <p>100 Students</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About <span>Our School</span></h2>
+                <p>Learn what makes us different</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image animate-slide-in-left">
+                    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80" alt="School building">
+                </div>
+                <div class="about-text animate-slide-in-right">
+                    <h3>Excellence in Education Since 1995</h3>
+                    <p>Bright Future Academy has been at the forefront of providing quality education to students from diverse backgrounds. Our mission is to empower students with knowledge, skills, and values to succeed in an ever-changing world.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <i class="fas fa-users"></i>
+                            <h4>2000+</h4>
+                            <p>Students</p>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <h4>150+</h4>
+                            <p>Teachers</p>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-trophy"></i>
+                            <h4>50+</h4>
+                            <p>Awards</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="class-card" onclick="window.location.href='class-3/index.html'">
-            <h2>Class 3</h2>
-            <p>100 Students</p>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our <span>Courses</span></h2>
+                <p>Comprehensive curriculum for all ages</p>
+            </div>
+            <div class="course-cards">
+                <div class="course-card animate-slide-up">
+                    <div class="course-icon">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <h3>Science Program</h3>
+                    <p>Rigorous program focusing on STEM subjects with advanced laboratory facilities.</p>
+                    <a href="#" class="btn-small">Learn More</a>
+                </div>
+                <div class="course-card animate-slide-up">
+                    <div class="course-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Arts Program</h3>
+                    <p>Creative arts program covering visual arts, music, theater, and digital media.</p>
+                    <a href="#" class="btn-small">Learn More</a>
+                </div>
+                <div class="course-card animate-slide-up">
+                    <div class="course-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Technology Program</h3>
+                    <p>Cutting-edge technology education with coding, robotics, and AI courses.</p>
+                    <a href="#" class="btn-small">Learn More</a>
+                </div>
+                <div class="course-card animate-slide-up">
+                    <div class="course-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h3>International Baccalaureate</h3>
+                    <p>Globally recognized curriculum preparing students for international universities.</p>
+                    <a href="#" class="btn-small">Learn More</a>
+                </div>
+            </div>
         </div>
-        <div class="class-card" onclick="window.location.href='class-4/index.html'">
-            <h2>Class 4</h2>
-            <p>100 Students</p>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="facilities" class="facilities">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our <span>Facilities</span></h2>
+                <p>State-of-the-art infrastructure for holistic development</p>
+            </div>
+            <div class="facility-slider">
+                <div class="facility-slide active">
+                    <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Library">
+                    <div class="slide-content">
+                        <h3>Modern Library</h3>
+                        <p>Our library houses over 50,000 books, digital resources, and quiet study spaces.</p>
+                    </div>
+                </div>
+                <div class="facility-slide">
+                    <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1493&q=80" alt="Sports Complex">
+                    <div class="slide-content">
+                        <h3>Sports Complex</h3>
+                        <p>Olympic-sized swimming pool, basketball courts, football field, and indoor gymnasium.</p>
+                    </div>
+                </div>
+                <div class="facility-slide">
+                    <img src="https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Science Lab">
+                    <div class="slide-content">
+                        <h3>Science Laboratories</h3>
+                        <p>Fully equipped labs for physics, chemistry, biology, and computer science.</p>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What <span>Parents Say</span></h2>
+                <p>Hear from our school community</p>
+            </div>
+            <div class="testimonial-cards">
+                <div class="testimonial-card animate-slide-up">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Bright Future Academy has provided my child with an exceptional education and nurturing environment. The teachers are dedicated and the facilities are outstanding.</p>
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah Johnson">
+                        <h4>Sarah Johnson</h4>
+                        <p>Parent of Grade 8 Student</p>
+                    </div>
+                </div>
+                <div class="testimonial-card animate-slide-up">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left"></i>
+                        <p>The school's focus on holistic development is impressive. My daughter has grown not just academically but also in her confidence and extracurricular skills.</p>
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen">
+                        <h4>Michael Chen</h4>
+                        <p>Parent of Grade 10 Student</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact <span>Us</span></h2>
+                <p>Get in touch for more information</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info animate-slide-in-left">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Address</h3>
+                            <p>123 Education Street, Knowledge City, 10101</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>admissions@brightfuture.edu</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Office Hours</h3>
+                            <p>Monday-Friday: 8:00 AM - 5:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form animate-slide-in-right">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Your Phone">
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="" disabled selected>Select Grade Level</option>
+                                <option value="elementary">Elementary School</option>
+                                <option value="middle">Middle School</option>
+                                <option value="high">High School</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Bright Future <span>Academy</span></h3>
+                    </div>
+                    <p>Empowering students to achieve excellence in academics, character, and leadership.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#facilities">Facilities</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Academics</h3>
+                    <ul>
+                        <li><a href="#">Admissions</a></li>
+                        <li><a href="#">Academic Calendar</a></li>
+                        <li><a href="#">School Policies</a></li>
+                        <li><a href="#">Curriculum</a></li>
+                        <li><a href="#">Faculty Directory</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for the latest updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Bright Future Academy. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
