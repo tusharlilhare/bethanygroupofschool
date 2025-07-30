@@ -454,138 +454,6 @@
                 "father": "Avinash Mishra",
                 "address": "190 Bose Lane, Lucknow",
                 "valid": "31/05/2026"
-            },
-            {
-                "id": "STU2025011",
-                "name": "Suresh Yadav",
-                "class": "10-B",
-                "roll": "17",
-                "dob": "03/10/2009",
-                "blood": "B+",
-                "father": "Mahesh Yadav",
-                "address": "202 Patel Road, Surat",
-                "valid": "31/05/2026"
-            },
-            {
-                "id": "STU2025012",
-                "name": "Meera Joshi",
-                "class": "9-C",
-                "roll": "09",
-                "dob": "27/05/2010",
-                "blood": "O+",
-                "father": "Sunil Joshi",
-                "address": "224 Vivekananda Nagar, Kanpur",
-                "valid": "31/05/2026"
-            },
-            {
-                "id": "STU2025013",
-                "name": "Karan Malhotra",
-                "class": "11-A",
-                "roll": "14",
-                "dob": "10/12/2008",
-                "blood": "A-",
-                "father": "Rakesh Malhotra",
-                "address": "246 Gandhi Street, Nagpur",
-                "valid": "31/05/2026"
-            },
-            {
-                "id": "STU2025014",
-                "name": "Divya Rao",
-                "class": "12-B",
-                "roll": "06",
-                "dob": "21/08/2007",
-                "blood": "AB+",
-                "father": "Vishal Rao",
-                "address": "268 Nehru Lane, Indore",
-                "valid": "31/05/2026"
-            },
-            {
-                "id": "STU2025015",
-                "name": "Rohit Saxena",
-                "class": "8-C",
-                "roll": "21",
-                "dob": "07/03/2011",
-                "blood": "O-",
-                "father": "Anuj Saxena",
-                "address": "290 Tagore Road, Thane",
-                "valid": "31/05/2026"
-            },
-            {
-                "id": "STU2025016",
-                "name": "Shreya Iyer",
-                "class": "10-D",
-                "roll": "13",
-                "dob": "29/11/2009",
-                "blood": "B-",
-                "father": "Rajeev Iyer",
-                "address": "312 Bose Nagar, Bhopal",
-                "valid": "31/05/2026"
-            },
-            {
-                "id": "STU2025017",
-                "name": "Vishal Choudhary",
-                "class": "9-D",
-                "roll": "18",
-                "dob": "16/07/2010",
-                "blood": "A+",
-                "father": "Sanjay Choudhary",
-                "address": "334 Patel Lane, Patna",
-                "valid": "31/05/2026"
-            },
-            {
-                "id": "STU2025018",
-                "name": "Anjali Desai",
-                "class": "11-D",
-                "roll": "04",
-                "dob": "09/04/2008",
-                "blood": "O+",
-                "father": "Nitin Desai",
-                "address": "356 Vivekananda Street, Vadodara",
-                "valid": "31/05/2026"
-            },
-            {
-                "id": "STU2025019",
-                "name": "Sanjay Kapoor",
-                "class": "12-D",
-                "roll": "16",
-                "dob": "24/01/2007",
-                "blood": "AB-",
-                "father": "Vikram Kapoor",
-                "address": "378 Gandhi Place, Ghaziabad",
-                "valid": "31/05/2026"
-            },
-            {
-                "id": "STU2025020",
-                "name": "Kavita Rana",
-                "class": "8-D",
-                "roll": "10",
-                "dob": "13/09/2011",
-                "blood": "B+",
-                "father": "Raj Rana",
-                "address": "400 Nehru Road, Ludhiana",
-                "valid": "31/05/2026"
-            },
-            {
-                "id": "STU2025021",
-                "name": "Nikhil Agarwal",
-                "class": "10-E",
-                "roll": "20",
-                "dob": "02/06/2009",
-                "blood": "O-",
-                "father": "Anil Agarwal",
-                "address": "422 Tagore Lane, Coimbatore",
-                "valid": "31/05/2026"
-            },
-            {
-                "id": "STU2025022",
-                "name": "Tushar Lilhare",
-                "class": "9-E",
-                "roll": "23",
-                "dob": "30/03/2010",
-                "blood": "A+",
-                "father": "Raj Kapoor",
-                "address": "444 Patel Street, Nashik",
-                "valid": "31/05/2026"
             }
         ];
 
@@ -599,7 +467,9 @@
                 const student = students.find(s => s.id === studentId);
                 if (student) {
                     // Show only this student's card
-                    showSingleStudentCard(student, students);
+                    showSingleStudentCard(student);
+                    // Also show verification details
+                    showVerification(student);
                 } else {
                     // If student not found, show all cards
                     generateStudentCards(students);
@@ -655,7 +525,7 @@
             });
         }
 
-        function showSingleStudentCard(student, students) {
+        function showSingleStudentCard(student) {
             // Hide the card grid
             document.getElementById('cardsContainer').style.display = 'none';
             
@@ -670,9 +540,6 @@
             setTimeout(() => {
                 generateQRCodeForStudent(student);
             }, 100);
-            
-            // Also show verification details
-            showVerification(student);
         }
 
         function createStudentCardHtml(student) {

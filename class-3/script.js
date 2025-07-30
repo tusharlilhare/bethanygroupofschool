@@ -12,32 +12,32 @@ fetch('data.json')
 function generateIDCards(students) {
     const cardsContainer = document.getElementById('cardsContainer');
     const currentUrl = new URL(window.location.href);
-    
+
+    if (typeof QRCode === 'undefined') {
+        console.error('QRCode library not loaded!');
+        return;
+    }
+
     students.forEach(student => {
-        // Create shareable URL for this student
         const shareUrl = new URL(currentUrl);
         shareUrl.searchParams.set('qrdata', encodeURIComponent(JSON.stringify(student)));
         shareUrl.hash = 'verification';
-        
-        // Create front side card
+
         const frontCard = document.createElement('article');
         frontCard.className = 'id-card';
         frontCard.innerHTML = `
             <header class="header">
                 ${student.school.name}
-                <div class="sub-header" aria-label="Address">${student.school.address}
+                <div class="sub-header">${student.school.address}
                     <p>session: ${student.school.session}</p>
                 </div>
             </header>
             <section class="body-section">
-                <div class="qr-code" aria-hidden="true">
-                    <img 
-                        src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(shareUrl.toString())}" 
-                        alt="QR code for student information"
-                    />
+                <div class="qr-code">
+                    <div id="qr-${student.id}" class="qr-code-container"></div>
                     <p>Sector id: ${student.school.codes.udise.substring(7)}</p>
                 </div>
-                <div class="photo" aria-label="Photo of ${student.name}">
+                <div class="photo">
                     <img 
                         src="${student.photo}" 
                         alt="Portrait photo of ${student.name}" 
@@ -46,49 +46,28 @@ function generateIDCards(students) {
                 </div>
                 <div class="details">
                     <div>
-                        <div class="chairman-sign" aria-label="Chairman signature">[signature]</div>
+                        <div class="chairman-sign">[signature]</div>
                         <div class="chairman-title">Principal</div>
                     </div>
                     <h1 class="name">${student.name.toUpperCase()}</h1>
                     <div class="info-list">
-                        <div class="info-item">
-                            <span class="info-label">Class:</span>
-                            <span class="info-value">${student.class}</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">Name:</span>
-                            <span class="info-value">${student.name}</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">Contact:</span>
-                            <span class="info-value">${student.contact}</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">DOB:</span>
-                            <span class="info-value">${student.dob}</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">Address:</span>
-                        </div>
-                        <span class="address-value">
-                            ${student.address.replace(/,/g, ',<br />')}
-                        </span>
+                        <div class="info-item"><span class="info-label">Class:</span><span class="info-value">${student.class}</span></div>
+                        <div class="info-item"><span class="info-label">Name:</span><span class="info-value">${student.name}</span></div>
+                        <div class="info-item"><span class="info-label">Contact:</span><span class="info-value">${student.contact}</span></div>
+                        <div class="info-item"><span class="info-label">DOB:</span><span class="info-value">${student.dob}</span></div>
+                        <div class="info-item"><span class="info-label">Address:</span></div>
+                        <span class="address-value">${student.address.replace(/,/g, ',<br />')}</span>
                     </div>
                 </div>
             </section>
         `;
-        
-        // Create back side card
+
         const backCard = document.createElement('article');
         backCard.className = 'id-card back';
         backCard.innerHTML = `
-            <img src="${student.school.logo}" 
-                 alt="School Logo" 
-                 class="back-logo">
+            <img src="${student.school.logo}" alt="School Logo" class="back-logo">
             <h2 class="back-title">${student.school.name}</h2>
-            <img src="${student.school.building}" 
-                 alt="School Building" 
-                 class="back-school-img">
+            <img src="${student.school.building}" alt="School Building" class="back-school-img">
             <div class="back-info">
                 <p>${student.school.address}</p>
                 <p>Affiliation No.: ${student.school.codes.affiliation}</p>
@@ -100,196 +79,159 @@ function generateIDCards(students) {
                 <p>Website: ${student.school.contact.website}</p>
             </div>
         `;
-        
-        // Add cards to container
+
         cardsContainer.appendChild(frontCard);
         cardsContainer.appendChild(backCard);
+
+        // Generate QR code for student
+        generateQRCodeForStudent(student);
     });
 }
 
-// Function to display student data in verification section
-function displayStudentData(student) {
-    const verificationDetails = document.getElementById('verificationDetails');
-    const statusText = document.getElementById('statusText');
-    const photoPlaceholder = document.querySelector('.photo-placeholder');
-    
-    if (!student) {
-        verificationDetails.innerHTML = '';
-        photoPlaceholder.innerHTML = 'Student Photo';
-        statusText.textContent = 'Invalid QR code. Please scan a valid student ID QR code.';
-        statusText.style.color = '#e74c3c';
-        return;
+// Generate QR Code
+function generateQRCodeForStudent(student) {
+    const qrContainer = document.getElementById(`qr-${student.id}`);
+    if (qrContainer) {
+        qrContainer.innerHTML = '';
+
+        const verificationUrl = `${window.location.origin}${window.location.pathname}?qrdata=${encodeURIComponent(JSON.stringify(student))}`;
+        
+        new QRCode(qrContainer, {
+            text: verificationUrl,
+            width: 90,
+            height: 90,
+            colorDark: "#000000",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+        });
+
+        // Simulate scan on click
+        qrContainer.addEventListener('click', () => {
+            showVerification(student);
+        });
     }
-    
-    // Update photo
-    photoPlaceholder.innerHTML = '';
-    const img = document.createElement('img');
-    img.src = student.photo;
-    img.alt = `Photo of ${student.name}`;
-    img.style.width = '100%';
-    img.style.height = '100%';
-    img.style.objectFit = 'cover';
-    img.onerror = function() {
-        this.src = 'https://via.placeholder.com/200x250?text=Student+Photo';
-    };
-    photoPlaceholder.appendChild(img);
-    
-    // Update details
-    verificationDetails.innerHTML = `
-        <h3 class="verified-student-name">${student.name}</h3>
-        <div class="verified-detail">
-            <span class="verified-label">Student ID:</span>
-            <span class="verified-value">${student.id}</span>
-        </div>
-        <div class="verified-detail">
-            <span class="verified-label">Class:</span>
-            <span class="verified-value">${student.class}</span>
-        </div>
-        <div class="verified-detail">
-            <span class="verified-label">Date of Birth:</span>
-            <span class="verified-value">${student.dob}</span>
-        </div>
-        <div class="verified-detail">
-            <span class="verified-label">Contact:</span>
-            <span class="verified-value">${student.contact}</span>
-        </div>
-        <div class="verified-detail">
-            <span class="verified-label">Address:</span>
-            <span class="verified-value">${student.address}</span>
-        </div>
-        <div class="verified-detail">
-            <span class="verified-label">School:</span>
-            <span class="verified-value">${student.school.name}</span>
-        </div>
-    `;
-    
-    statusText.textContent = `Student verified: ${student.name} (${student.id})`;
-    statusText.style.color = '#27ae60';
 }
 
-// Function to initialize QR scanner
+// Show verification details
+function showVerification(student) {
+    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelector('[data-tab="verification"]').classList.add('active');
+
+    document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+    document.getElementById('verification').classList.add('active');
+
+    document.getElementById('verification').scrollIntoView({ behavior: 'smooth' });
+
+    const roll = student.roll || 'N/A';
+    const blood = student.blood || 'N/A';
+    const father = student.father || 'N/A';
+    const valid = student.valid || '2025-12-31';
+
+    const detailsHtml = `
+        <div class="detail-card">
+            <h3>Student Information</h3>
+            <p><strong>Name:</strong> ${student.name}</p>
+            <p><strong>Class:</strong> ${student.class}</p>
+            <p><strong>Roll No:</strong> ${roll}</p>
+            <p><strong>Student ID:</strong> ${student.id}</p>
+        </div>
+        <div class="detail-card">
+            <h3>Personal Details</h3>
+            <p><strong>Date of Birth:</strong> ${student.dob}</p>
+            <p><strong>Blood Group:</strong> ${blood}</p>
+            <p><strong>Father's Name:</strong> ${father}</p>
+        </div>
+        <div class="detail-card">
+            <h3>Validity</h3>
+            <p><strong>Valid Through:</strong> ${valid}</p>
+            <p><strong>Issued Date:</strong> 01/06/2025</p>
+            <p><strong>Status:</strong> Active</p>
+        </div>
+        <div class="detail-card">
+            <h3>Contact Information</h3>
+            <p><strong>Address:</strong> ${student.address}</p>
+            <p><strong>Phone:</strong> ${student.contact}</p>
+            <p><strong>Email:</strong> student@school.edu</p>
+        </div>
+    `;
+
+    document.getElementById('verificationDetails').innerHTML = detailsHtml;
+    document.getElementById('statusText').innerHTML = `<i class="fas fa-check-circle"></i> ID Verified Successfully!`;
+}
+
+// Scanner init (if needed)
 function initQRScanner() {
     const qrScannerContainer = document.getElementById('qr-scanner-container');
-    
-    // Clear any existing scanner
     qrScannerContainer.innerHTML = '';
-    
-    // Check if we're on the verification tab
-    if (!document.getElementById('verification')) return;
-    
-    // Check if we have a scanner library available
+
+    if (!document.getElementById('verification').classList.contains('active')) return;
+
     if (typeof Html5QrcodeScanner === 'undefined') {
         qrScannerContainer.innerHTML = '<p>QR scanner library not loaded. Please refresh the page.</p>';
         console.warn('QR scanner library not loaded');
         return;
     }
-    
-    // Create scanner
-    const scanner = new Html5QrcodeScanner(
-        "qr-scanner-container", 
-        { 
-            fps: 10,
-            qrbox: { width: 250, height: 250 },
-            rememberLastUsedCamera: true
-        },
-        false
-    );
-    
+
+    const scanner = new Html5QrcodeScanner("qr-scanner-container", {
+        fps: 10,
+        qrbox: { width: 250, height: 250 },
+        rememberLastUsedCamera: true
+    }, false);
+
     scanner.render((decodedText) => {
         try {
-            // Create a URL with the QR data as a parameter
-            const url = new URL(window.location.href);
-            url.searchParams.set('qrdata', encodeURIComponent(decodedText));
-            url.hash = 'verification';
-            
-            // Update the URL without reloading the page
-            window.history.pushState({}, '', url);
-            
-            // Parse and display the student data
             const studentData = JSON.parse(decodedText);
-            displayStudentData(studentData);
-            
-            // Stop scanner after successful scan
+            showVerification(studentData);
             scanner.clear();
-            
-            // Show rescan button
-            const rescanBtn = document.createElement('button');
-            rescanBtn.className = 'action-btn print';
-            rescanBtn.innerHTML = '<i class="fas fa-qrcode"></i> Rescan QR Code';
-            rescanBtn.onclick = () => {
-                qrScannerContainer.innerHTML = '';
-                initQRScanner();
-            };
-            qrScannerContainer.appendChild(rescanBtn);
         } catch (e) {
-            displayStudentData(null);
             console.error('Error parsing QR code data:', e);
         }
     }, (error) => {
-        console.error('QR Scanner error:', error);
+        console.warn('QR scan error:', error);
     });
 }
 
-// Function to handle URL parameters with QR data
+// Load QR from URL if exists
 function checkUrlForStudentData() {
     const urlParams = new URLSearchParams(window.location.search);
     const qrData = urlParams.get('qrdata');
-    
+
     if (qrData) {
         try {
-            // Switch to verification tab
             document.querySelector('[data-tab="verification"]').click();
-            
             const studentData = JSON.parse(decodeURIComponent(qrData));
-            displayStudentData(studentData);
-            
-            // Clear the scanner if it exists
-            const qrScannerContainer = document.getElementById('qr-scanner-container');
-            qrScannerContainer.innerHTML = '';
-            
-            // Add rescan button
-            const rescanBtn = document.createElement('button');
-            rescanBtn.className = 'action-btn print';
-            rescanBtn.innerHTML = '<i class="fas fa-qrcode"></i> Rescan QR Code';
-            rescanBtn.onclick = () => {
-                qrScannerContainer.innerHTML = '';
-                initQRScanner();
-            };
-            qrScannerContainer.appendChild(rescanBtn);
+            showVerification(studentData);
+            document.getElementById('qr-scanner-container').innerHTML = '';
         } catch (e) {
-            console.error('Error parsing URL QR data:', e);
-            displayStudentData(null);
+            console.error('Invalid QR data in URL:', e);
         }
     }
 }
 
-// Setup event listeners
+// Setup tab events
 function setupEventListeners() {
-    // Tab switching functionality
     document.querySelectorAll('.tab-btn').forEach(button => {
         button.addEventListener('click', () => {
             const tabId = button.getAttribute('data-tab');
-            
-            // Remove active class from all buttons and content
             document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
             document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
-            
-            // Add active class to clicked button and corresponding content
+
             button.classList.add('active');
             document.getElementById(tabId).classList.add('active');
-            
-            // Initialize scanner if verification tab is clicked
+
             if (tabId === 'verification') {
                 initQRScanner();
             }
         });
     });
 
-    // Sample QR download functionality
     document.getElementById('downloadAll').addEventListener('click', () => {
-        alert('In a real implementation, this would download all QR codes');
+        alert('Download feature not implemented yet.');
     });
 }
 
-// Call this when page loads
-document.addEventListener('DOMContentLoaded', checkUrlForStudentData);
+// Init when DOM ready
+document.addEventListener('DOMContentLoaded', () => {
+    checkUrlForStudentData();
+    setupEventListeners();
+});
