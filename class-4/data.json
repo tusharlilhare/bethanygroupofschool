@@ -1,244 +1,504 @@
 {
   "students": [
-    {
-      "id": "STU2025001",
-      "name": "Kanak Sarathe",
-      "class": "Nursery",
-      "roll": "01",
-      "dob": "15/08/2010",
-      "blood": "O+",
-      "father": "Dinesh Lilhare",
-      "address": "Bethany Convent School, DM 49 Phase II Indus Town, Ratanpur Bhopal",
-      "valid": "31/05/2026",
-      "contact": "7909385310"
+  {
+      "id": "STU001",
+      "name": "Tushar Lilharee",
+      "class": "10-A",
+      "dob": "16/04/2005",
+      "contact": "+91 8815455717",
+      "address": "123 Main Street, Cityville, State, 123456",
+      "photo": "./tusu.jpg",
+      "school": {
+        "name": "City Public School",
+        "address": "456 Education Road, Cityville, State, 123456",
+        "session": "2023-2024",
+        "logo": "https://via.placeholder.com/100?text=School+Logo",
+        "building": "https://via.placeholder.com/400x150?text=School+Building",
+        "codes": {
+          "affiliation": "AFF123456",
+          "udise": "UDISE123456789"
+        },
+        "contact": {
+          "phone": "+911234567890",
+          "email": "info@citypublic.edu",
+          "website": "www.citypublic.edu"
+        }
+      }
     },
     {
-      "id": "STU2025002",
-      "name": "Aarav Sharma",
-      "class": "Nursery",
-      "roll": "02",
-      "dob": "12/03/2011",
-      "blood": "A+",
-      "father": "Rajesh Sharma",
-      "address": "45, Green Park Colony, Bhopal",
-      "valid": "31/05/2026",
-      "contact": "9876543210"
+      "id": "STU002",
+      "name": "Jane Smith",
+      "class": "9-B",
+      "dob": "22/08/2008",
+      "contact": "+919876543211",
+      "address": "456 Oak Avenue, Townsville, State, 654321",
+      "photo": "https://randomuser.me/api/portraits/women/2.jpg",
+      "school": {
+        "name": "City Public School",
+        "address": "456 Education Road, Cityville, State, 123456",
+        "session": "2023-2024",
+        "logo": "https://via.placeholder.com/100?text=School+Logo",
+        "building": "https://via.placeholder.com/400x150?text=School+Building",
+        "codes": {
+          "affiliation": "AFF123456",
+          "udise": "UDISE123456789"
+        },
+        "contact": {
+          "phone": "+911234567890",
+          "email": "info@citypublic.edu",
+          "website": "www.citypublic.edu"
+        }
+      }
     },
     {
-      "id": "STU2025003",
-      "name": "Priya Patel",
-      "class": "LKG",
-      "roll": "01",
-      "dob": "05/11/2010",
-      "blood": "B+",
-      "father": "Sanjay Patel",
-      "address": "78, New Market, Bhopal",
-      "valid": "31/05/2026",
-      "contact": "8765432109"
+      "id": "STU003",
+      "name": "Amit Kumar",
+      "class": "8-A",
+      "dob": "10/01/2009",
+      "contact": "+919876543212",
+      "address": "789 Pine Street, Cityville, State, 123457",
+      "photo": "https://randomuser.me/api/portraits/men/3.jpg",
+      "school": {
+        "name": "City Public School",
+        "address": "456 Education Road, Cityville, State, 123456",
+        "session": "2023-2024",
+        "logo": "https://via.placeholder.com/100?text=School+Logo",
+        "building": "https://via.placeholder.com/400x150?text=School+Building",
+        "codes": {
+          "affiliation": "AFF123456",
+          "udise": "UDISE123456789"
+        },
+        "contact": {
+          "phone": "+911234567890",
+          "email": "info@citypublic.edu",
+          "website": "www.citypublic.edu"
+        }
+      }
     },
     {
-      "id": "STU2025004",
+      "id": "STU004",
+      "name": "Priya Singh",
+      "class": "7-B",
+      "dob": "05/03/2010",
+      "contact": "+919876543213",
+      "address": "321 Maple Avenue, Townsville, State, 654322",
+      "photo": "https://randomuser.me/api/portraits/women/4.jpg",
+      "school": {
+        "name": "City Public School",
+        "address": "456 Education Road, Cityville, State, 123456",
+        "session": "2023-2024",
+        "logo": "https://via.placeholder.com/100?text=School+Logo",
+        "building": "https://via.placeholder.com/400x150?text=School+Building",
+        "codes": {
+          "affiliation": "AFF123456",
+          "udise": "UDISE123456789"
+        },
+        "contact": {
+          "phone": "+911234567890",
+          "email": "info@citypublic.edu",
+          "website": "www.citypublic.edu"
+        }
+      }
+    },
+    {
+      "id": "STU005",
       "name": "Rahul Verma",
-      "class": "LKG",
-      "roll": "02",
-      "dob": "22/07/2011",
-      "blood": "AB+",
-      "father": "Amit Verma",
-      "address": "23, Arera Colony, Bhopal",
-      "valid": "31/05/2026",
-      "contact": "7654321098"
+      "class": "6-A",
+      "dob": "18/07/2011",
+      "contact": "+919876543214",
+      "address": "654 Cedar Lane, Cityville, State, 123458",
+      "photo": "https://randomuser.me/api/portraits/men/5.jpg",
+      "school": {
+        "name": "City Public School",
+        "address": "456 Education Road, Cityville, State, 123456",
+        "session": "2023-2024",
+        "logo": "https://via.placeholder.com/100?text=School+Logo",
+        "building": "https://via.placeholder.com/400x150?text=School+Building",
+        "codes": {
+          "affiliation": "AFF123456",
+          "udise": "UDISE123456789"
+        },
+        "contact": {
+          "phone": "+911234567890",
+          "email": "info@citypublic.edu",
+          "website": "www.citypublic.edu"
+        }
+      }
     },
     {
-      "id": "STU2025005",
-      "name": "Ananya Singh",
-      "class": "UKG",
-      "roll": "01",
-      "dob": "18/09/2009",
-      "blood": "O-",
-      "father": "Vikram Singh",
-      "address": "56, Shivaji Nagar, Bhopal",
-      "valid": "31/05/2026",
-      "contact": "6543210987"
+      "id": "STU006",
+      "name": "Sneha Patel",
+      "class": "5-B",
+      "dob": "23/11/2012",
+      "contact": "+919876543215",
+      "address": "987 Birch Road, Townsville, State, 654323",
+      "photo": "https://randomuser.me/api/portraits/women/6.jpg",
+      "school": {
+        "name": "City Public School",
+        "address": "456 Education Road, Cityville, State, 123456",
+        "session": "2023-2024",
+        "logo": "https://via.placeholder.com/100?text=School+Logo",
+        "building": "https://via.placeholder.com/400x150?text=School+Building",
+        "codes": {
+          "affiliation": "AFF123456",
+          "udise": "UDISE123456789"
+        },
+        "contact": {
+          "phone": "+911234567890",
+          "email": "info@citypublic.edu",
+          "website": "www.citypublic.edu"
+        }
+      }
     },
     {
-      "id": "STU2025006",
-      "name": "Aditya Gupta",
-      "class": "UKG",
-      "roll": "02",
-      "dob": "30/01/2010",
-      "blood": "A-",
-      "father": "Nitin Gupta",
-      "address": "34, MP Nagar, Bhopal",
-      "valid": "31/05/2026",
-      "contact": "9432109876"
+      "id": "STU007",
+      "name": "Vikas Sharma",
+      "class": "4-A",
+      "dob": "30/09/2013",
+      "contact": "+919876543216",
+      "address": "159 Spruce Street, Cityville, State, 123459",
+      "photo": "https://randomuser.me/api/portraits/men/7.jpg",
+      "school": {
+        "name": "City Public School",
+        "address": "456 Education Road, Cityville, State, 123456",
+        "session": "2023-2024",
+        "logo": "https://via.placeholder.com/100?text=School+Logo",
+        "building": "https://via.placeholder.com/400x150?text=School+Building",
+        "codes": {
+          "affiliation": "AFF123456",
+          "udise": "UDISE123456789"
+        },
+        "contact": {
+          "phone": "+911234567890",
+          "email": "info@citypublic.edu",
+          "website": "www.citypublic.edu"
+        }
+      }
     },
     {
-      "id": "STU2025007",
-      "name": "Ishita Joshi",
-      "class": "1st",
-      "roll": "01",
-      "dob": "14/06/2009",
-      "blood": "B-",
-      "father": "Pankaj Joshi",
-      "address": "89, Kolar Road, Bhopal",
-      "valid": "31/05/2026",
-      "contact": "8321098765"
+      "id": "STU008",
+      "name": "Anjali Gupta",
+      "class": "3-B",
+      "dob": "12/02/2014",
+      "contact": "+919876543217",
+      "address": "753 Willow Avenue, Townsville, State, 654324",
+      "photo": "https://randomuser.me/api/portraits/women/8.jpg",
+      "school": {
+        "name": "City Public School",
+        "address": "456 Education Road, Cityville, State, 123456",
+        "session": "2023-2024",
+        "logo": "https://via.placeholder.com/100?text=School+Logo",
+        "building": "https://via.placeholder.com/400x150?text=School+Building",
+        "codes": {
+          "affiliation": "AFF123456",
+          "udise": "UDISE123456789"
+        },
+        "contact": {
+          "phone": "+911234567890",
+          "email": "info@citypublic.edu",
+          "website": "www.citypublic.edu"
+        }
+      }
     },
     {
-      "id": "STU2025008",
-      "name": "Vivaan Malhotra",
-      "class": "1st",
-      "roll": "02",
-      "dob": "27/12/2009",
-      "blood": "AB-",
-      "father": "Rohit Malhotra",
-      "address": "12, Bairagarh, Bhopal",
-      "valid": "31/05/2026",
-      "contact": "7210987654"
+      "id": "STU009",
+      "name": "Rohan Mehta",
+      "class": "2-A",
+      "dob": "25/06/2015",
+      "contact": "+919876543218",
+      "address": "852 Aspen Road, Cityville, State, 123460",
+      "photo": "https://randomuser.me/api/portraits/men/9.jpg",
+      "school": {
+        "name": "City Public School",
+        "address": "456 Education Road, Cityville, State, 123456",
+        "session": "2023-2024",
+        "logo": "https://via.placeholder.com/100?text=School+Logo",
+        "building": "https://via.placeholder.com/400x150?text=School+Building",
+        "codes": {
+          "affiliation": "AFF123456",
+          "udise": "UDISE123456789"
+        },
+        "contact": {
+          "phone": "+911234567890",
+          "email": "info@citypublic.edu",
+          "website": "www.citypublic.edu"
+        }
+      }
     },
     {
-      "id": "STU2025009",
-      "name": "Saanvi Reddy",
-      "class": "2nd",
-      "roll": "01",
-      "dob": "08/04/2008",
-      "blood": "O+",
-      "father": "Arjun Reddy",
-      "address": "67, Hoshangabad Road, Bhopal",
-      "valid": "31/05/2026",
-      "contact": "6109876543"
+      "id": "STU010",
+      "name": "Meera Joshi",
+      "class": "1-B",
+      "dob": "08/12/2016",
+      "contact": "+919876543219",
+      "address": "963 Poplar Lane, Townsville, State, 654325",
+      "photo": "https://randomuser.me/api/portraits/women/10.jpg",
+      "school": {
+        "name": "City Public School",
+        "address": "456 Education Road, Cityville, State, 123456",
+        "session": "2023-2024",
+        "logo": "https://via.placeholder.com/100?text=School+Logo",
+        "building": "https://via.placeholder.com/400x150?text=School+Building",
+        "codes": {
+          "affiliation": "AFF123456",
+          "udise": "UDISE123456789"
+        },
+        "contact": {
+          "phone": "+911234567890",
+          "email": "info@citypublic.edu",
+          "website": "www.citypublic.edu"
+        }
+      }
     },
     {
-      "id": "STU2025010",
-      "name": "Kabir Khanna",
-      "class": "2nd",
-      "roll": "02",
-      "dob": "19/10/2008",
-      "blood": "A+",
-      "father": "Rahul Khanna",
-      "address": "45, BHEL Township, Bhopal",
-      "valid": "31/05/2026",
-      "contact": "5098765432"
+      "id": "STU011",
+      "name": "Arjun Yadav",
+      "class": "10-B",
+      "dob": "17/04/2007",
+      "contact": "+919876543220",
+      "address": "147 Elm Street, Cityville, State, 123461",
+      "photo": "https://randomuser.me/api/portraits/men/11.jpg",
+      "school": {
+        "name": "City Public School",
+        "address": "456 Education Road, Cityville, State, 123456",
+        "session": "2023-2024",
+        "logo": "https://via.placeholder.com/100?text=School+Logo",
+        "building": "https://via.placeholder.com/400x150?text=School+Building",
+        "codes": {
+          "affiliation": "AFF123456",
+          "udise": "UDISE123456789"
+        },
+        "contact": {
+          "phone": "+911234567890",
+          "email": "info@citypublic.edu",
+          "website": "www.citypublic.edu"
+        }
+      }
     },
     {
-      "id": "STU2025011",
-      "name": "Myra Choudhary",
-      "class": "3rd",
-      "roll": "01",
-      "dob": "03/05/2007",
-      "blood": "B+",
-      "father": "Vishal Choudhary",
-      "address": "78, Danish Nagar, Bhopal",
-      "valid": "31/05/2026",
-      "contact": "4987654321"
+      "id": "STU012",
+      "name": "Kavita Rani",
+      "class": "9-A",
+      "dob": "29/09/2008",
+      "contact": "+919876543221",
+      "address": "258 Fir Avenue, Townsville, State, 654326",
+      "photo": "https://randomuser.me/api/portraits/women/12.jpg",
+      "school": {
+        "name": "City Public School",
+        "address": "456 Education Road, Cityville, State, 123456",
+        "session": "2023-2024",
+        "logo": "https://via.placeholder.com/100?text=School+Logo",
+        "building": "https://via.placeholder.com/400x150?text=School+Building",
+        "codes": {
+          "affiliation": "AFF123456",
+          "udise": "UDISE123456789"
+        },
+        "contact": {
+          "phone": "+911234567890",
+          "email": "info@citypublic.edu",
+          "website": "www.citypublic.edu"
+        }
+      }
     },
     {
-      "id": "STU2025012",
-      "name": "Arjun Saxena",
-      "class": "3rd",
-      "roll": "02",
-      "dob": "25/11/2007",
-      "blood": "AB+",
-      "father": "Anil Saxena",
-      "address": "23, Saket Nagar, Bhopal",
-      "valid": "31/05/2026",
-      "contact": "3876543210"
+      "id": "STU013",
+      "name": "Manish Agarwal",
+      "class": "8-B",
+      "dob": "13/02/2009",
+      "contact": "+919876543222",
+      "address": "369 Chestnut Road, Cityville, State, 123462",
+      "photo": "https://randomuser.me/api/portraits/men/13.jpg",
+      "school": {
+        "name": "City Public School",
+        "address": "456 Education Road, Cityville, State, 123456",
+        "session": "2023-2024",
+        "logo": "https://via.placeholder.com/100?text=School+Logo",
+        "building": "https://via.placeholder.com/400x150?text=School+Building",
+        "codes": {
+          "affiliation": "AFF123456",
+          "udise": "UDISE123456789"
+        },
+        "contact": {
+          "phone": "+911234567890",
+          "email": "info@citypublic.edu",
+          "website": "www.citypublic.edu"
+        }
+      }
     },
     {
-      "id": "STU2025013",
-      "name": "Anika Trivedi",
-      "class": "4th",
-      "roll": "01",
-      "dob": "17/08/2006",
-      "blood": "O-",
-      "father": "Prateek Trivedi",
-      "address": "56, Gulmohar Colony, Bhopal",
-      "valid": "31/05/2026",
-      "contact": "2765432109"
+      "id": "STU014",
+      "name": "Pooja Mishra",
+      "class": "7-A",
+      "dob": "21/06/2010",
+      "contact": "+919876543223",
+      "address": "741 Walnut Avenue, Townsville, State, 654327",
+      "photo": "https://randomuser.me/api/portraits/women/14.jpg",
+      "school": {
+        "name": "City Public School",
+        "address": "456 Education Road, Cityville, State, 123456",
+        "session": "2023-2024",
+        "logo": "https://via.placeholder.com/100?text=School+Logo",
+        "building": "https://via.placeholder.com/400x150?text=School+Building",
+        "codes": {
+          "affiliation": "AFF123456",
+          "udise": "UDISE123456789"
+        },
+        "contact": {
+          "phone": "+911234567890",
+          "email": "info@citypublic.edu",
+          "website": "www.citypublic.edu"
+        }
+      }
     },
     {
-      "id": "STU2025014",
-      "name": "Reyansh Agarwal",
-      "class": "4th",
-      "roll": "02",
-      "dob": "29/02/2008",
-      "blood": "A-",
-      "father": "Manish Agarwal",
-      "address": "34, Piplani, Bhopal",
-      "valid": "31/05/2026",
-      "contact": "1654321098"
+      "id": "STU015",
+      "name": "Sandeep Chauhan",
+      "class": "6-B",
+      "dob": "04/10/2011",
+      "contact": "+919876543224",
+      "address": "852 Hickory Street, Cityville, State, 123463",
+      "photo": "https://randomuser.me/api/portraits/men/15.jpg",
+      "school": {
+        "name": "City Public School",
+        "address": "456 Education Road, Cityville, State, 123456",
+        "session": "2023-2024",
+        "logo": "https://via.placeholder.com/100?text=School+Logo",
+        "building": "https://via.placeholder.com/400x150?text=School+Building",
+        "codes": {
+          "affiliation": "AFF123456",
+          "udise": "UDISE123456789"
+        },
+        "contact": {
+          "phone": "+911234567890",
+          "email": "info@citypublic.edu",
+          "website": "www.citypublic.edu"
+        }
+      }
     },
     {
-      "id": "STU2025015",
-      "name": "Kiara Nair",
-      "class": "5th",
-      "roll": "01",
-      "dob": "11/07/2006",
-      "blood": "B-",
-      "father": "Rajat Nair",
-      "address": "89, Katara Hills, Bhopal",
-      "valid": "31/05/2026",
-      "contact": "9543210987"
+      "id": "STU016",
+      "name": "Neha Kapoor",
+      "class": "5-A",
+      "dob": "16/01/2012",
+      "contact": "+919876543225",
+      "address": "963 Magnolia Lane, Townsville, State, 654328",
+      "photo": "https://randomuser.me/api/portraits/women/16.jpg",
+      "school": {
+        "name": "City Public School",
+        "address": "456 Education Road, Cityville, State, 123456",
+        "session": "2023-2024",
+        "logo": "https://via.placeholder.com/100?text=School+Logo",
+        "building": "https://via.placeholder.com/400x150?text=School+Building",
+        "codes": {
+          "affiliation": "AFF123456",
+          "udise": "UDISE123456789"
+        },
+        "contact": {
+          "phone": "+911234567890",
+          "email": "info@citypublic.edu",
+          "website": "www.citypublic.edu"
+        }
+      }
     },
     {
-      "id": "STU2025016",
-      "name": "Vihaan Mehra",
-      "class": "5th",
-      "roll": "02",
-      "dob": "22/01/2007",
-      "blood": "AB-",
-      "father": "Karan Mehra",
-      "address": "12, Char Imli, Bhopal",
-      "valid": "31/05/2026",
-      "contact": "8432109876"
+      "id": "STU017",
+      "name": "Ravi Singh",
+      "class": "4-B",
+      "dob": "28/05/2013",
+      "contact": "+919876543226",
+      "address": "147 Palm Street, Cityville, State, 123464",
+      "photo": "https://randomuser.me/api/portraits/men/17.jpg",
+      "school": {
+        "name": "City Public School",
+        "address": "456 Education Road, Cityville, State, 123456",
+        "session": "2023-2024",
+        "logo": "https://via.placeholder.com/100?text=School+Logo",
+        "building": "https://via.placeholder.com/400x150?text=School+Building",
+        "codes": {
+          "affiliation": "AFF123456",
+          "udise": "UDISE123456789"
+        },
+        "contact": {
+          "phone": "+911234567890",
+          "email": "info@citypublic.edu",
+          "website": "www.citypublic.edu"
+        }
+      }
     },
     {
-      "id": "STU2025017",
-      "name": "Aadhya Srinivasan",
-      "class": "6th",
-      "roll": "01",
-      "dob": "04/09/2005",
-      "blood": "O+",
-      "father": "Suresh Srinivasan",
-      "address": "67, Kohefiza, Bhopal",
-      "valid": "31/05/2026",
-      "contact": "7321098765"
+      "id": "STU018",
+      "name": "Simran Kaur",
+      "class": "3-A",
+      "dob": "09/09/2014",
+      "contact": "+919876543227",
+      "address": "258 Cypress Avenue, Townsville, State, 654329",
+      "photo": "https://randomuser.me/api/portraits/women/18.jpg",
+      "school": {
+        "name": "City Public School",
+        "address": "456 Education Road, Cityville, State, 123456",
+        "session": "2023-2024",
+        "logo": "https://via.placeholder.com/100?text=School+Logo",
+        "building": "https://via.placeholder.com/400x150?text=School+Building",
+        "codes": {
+          "affiliation": "AFF123456",
+          "udise": "UDISE123456789"
+        },
+        "contact": {
+          "phone": "+911234567890",
+          "email": "info@citypublic.edu",
+          "website": "www.citypublic.edu"
+        }
+      }
     },
     {
-      "id": "STU2025018",
-      "name": "Shaurya Bajaj",
-      "class": "6th",
-      "roll": "02",
-      "dob": "16/03/2006",
-      "blood": "A+",
-      "father": "Vivek Bajaj",
-      "address": "45, 10 No. Market, Bhopal",
-      "valid": "31/05/2026",
-      "contact": "6210987654"
+      "id": "STU019",
+      "name": "Mohit Jain",
+      "class": "2-B",
+      "dob": "20/03/2015",
+      "contact": "+919876543228",
+      "address": "369 Redwood Road, Cityville, State, 123465",
+      "photo": "https://randomuser.me/api/portraits/men/19.jpg",
+      "school": {
+        "name": "City Public School",
+        "address": "456 Education Road, Cityville, State, 123456",
+        "session": "2023-2024",
+        "logo": "https://via.placeholder.com/100?text=School+Logo",
+        "building": "https://via.placeholder.com/400x150?text=School+Building",
+        "codes": {
+          "affiliation": "AFF123456",
+          "udise": "UDISE123456789"
+        },
+        "contact": {
+          "phone": "+911234567890",
+          "email": "info@citypublic.edu",
+          "website": "www.citypublic.edu"
+        }
+      }
     },
     {
-      "id": "STU2025019",
-      "name": "Diya Iyer",
-      "class": "7th",
-      "roll": "01",
-      "dob": "28/10/2005",
-      "blood": "B+",
-      "father": "Gautam Iyer",
-      "address": "78, Professors Colony, Bhopal",
-      "valid": "31/05/2026",
-      "contact": "5109876543"
-    },
-    {
-      "id": "STU2025020",
-      "name": "Atharva Kapoor",
-      "class": "7th",
-      "roll": "02",
-      "dob": "09/06/2006",
-      "blood": "AB+",
-      "father": "Neeraj Kapoor",
-      "address": "23, Tulsi Nagar, Bhopal",
-      "valid": "31/05/2026",
-      "contact": "4098765432"
+      "id": "STU020",
+      "name": "Ayesha Khan",
+      "class": "1-A",
+      "dob": "03/07/2016",
+      "contact": "+919876543229",
+      "address": "741 Sycamore Avenue, Townsville, State, 654330",
+      "photo": "https://randomuser.me/api/portraits/women/20.jpg",
+      "school": {
+        "name": "City Public School",
+        "address": "456 Education Road, Cityville, State, 123456",
+        "session": "2023-2024",
+        "logo": "https://via.placeholder.com/100?text=School+Logo",
+        "building": "https://via.placeholder.com/400x150?text=School+Building",
+        "codes": {
+          "affiliation": "AFF123456",
+          "udise": "UDISE123456789"
+        },
+        "contact": {
+          "phone": "+911234567890",
+          "email": "info@citypublic.edu",
+          "website": "www.citypublic.edu"
+        }
+      }
     }
   ]
 }
