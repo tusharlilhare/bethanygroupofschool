@@ -8,10 +8,12 @@
       "contact": "+91 8815455717",
       "address": "123 Main Street, Cityville, State, 123456",
       "photo": "./tusu.jpg",
+      
       "school": {
         "name": "City Public School",
         "address": "456 Education Road, Cityville, State, 123456",
         "session": "2023-2024",
+        
         "logo": "https://via.placeholder.com/100?text=School+Logo",
         "building": "https://via.placeholder.com/400x150?text=School+Building",
         "codes": {
